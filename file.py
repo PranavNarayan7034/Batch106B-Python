@@ -1336,7 +1336,99 @@ student = {
 # print(student['Address'])
 # print(student['tempAddress']) Error
 
-print(student['Name']['Lname'])
-print(student['Phone'][0])
-print(student['Marks'][2])
-print(student['Address']['PermAddress']['City'])
+# print(student['Name']['Lname'])
+# print(student['Phone'][0])
+# print(student['Marks'][2])
+# print(student['Address']['PermAddress']['City'])
+
+products = {
+    "P101": {
+        "name": "Laptop",
+        "brand": "Dell",
+        "price": 65000,
+        "stock": 15,
+        "colors": ["Black", "Silver", "Blue"],          
+        "dimensions": (35.8, 24.0, 1.8),        
+        "seller": {
+            "id": "S001",
+            "name": "Tech Store",
+            "rating": 4.7,
+            "location": "Kochi"
+        }
+    },
+
+    "P102": {
+        "name": "Smartphone",
+        "brand": "Samsung",
+        "price": 28000,
+        "stock": 30,
+        "colors": ["Black", "White", "Green"],
+        "dimensions": (15.5, 7.2, 0.8),
+        "seller": {
+            "id": "S002",
+            "name": "Mobile Hub",
+            "rating": 4.5,
+            "location": "Bangalore"
+        }
+    },
+
+    "P103": {
+        "name": "Wireless Mouse",
+        "brand": "Logitech",
+        "price": 1200,
+        "stock": 50,
+        "colors": ["Black", "Grey"],
+        "dimensions": (10.5, 6.2, 3.8),
+        "seller": {
+            "id": "S003",
+            "name": "Accessories World",
+            "rating": 4.6,
+            "location": "Chennai"
+        }
+    },
+
+    "P104": {
+        "name": "Keyboard",
+        "brand": "HP",
+        "price": 1800,
+        "stock": 25,
+        "colors": ["Black"],
+        "dimensions": (44.5, 14.5, 3.2),
+        "seller": {
+            "id": "S004",
+            "name": "Computer Zone",
+            "rating": 4.3,
+            "location": "Hyderabad"
+        }
+    },
+
+    "P105": {
+        "name": "Monitor",
+        "brand": "LG",
+        "price": 14500,
+        "stock": 12,
+        "colors": ["Black"],
+        "dimensions": (61.0, 36.0, 5.0),
+        "seller": {
+            "id": "S005",
+            "name": "Display Center",
+            "rating": 4.8,
+            "location": "Mumbai"
+        }
+    }
+}
+
+# 1. Print the price of P102.
+print(products['P102']['price'])
+
+# 2. Print the seller name of P104.
+print(products['P104']['seller']['name'])
+
+# 3. Print the first color available for P101.
+print(products['P101']['colors'][0])
+
+# 4. ⁠Print the seller’s location of P102.
+print(products['P102']['seller']['location'])
+
+# 5. Print the stock of P105.
+print(products['P105']['stock'])
