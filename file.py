@@ -1294,24 +1294,49 @@ products = {"Laptop":62600,"Mouse":800,"Keyboard":2500,"Monitor":12000,"Ups":230
 # Create a new dict in which apply 20% discount if the product price is above 5000 and
 # if price is below 5000 no change in price 
 
-new = {}
-for i,j in products.items():
-    if j >= 5000:
-        new[i] = round(j*.80)
-    else:
-        new[i] = j
-print(new)
-print(f"New dict = {new}")
+# new = {}
+# for i,j in products.items():
+#     if j >= 5000:
+#         new[i] = round(j*.80)
+#     else:
+#         new[i] = j
+# print(new)
+# print(f"New dict = {new}")
 
 
-Fname = "John"
-Lname = "David"
-Age = 22 
-Place = "London"
+# Fname = "John"
+# Lname = "David"
+# Age = 22 
+# Place = "London"
 
 # print('Hi my name is',Fname,Lname,". I am ",Age," Years old. I am from ",Place)
 # formating 
 # Format and Fstring 
 
-print('Hi my name is {} {}.I am {} years old. I am from {}'.format(Fname,Lname,Age,Place))
-print(f"Hi my name is {Fname} {Lname}.I am {Age} years old. I am from {Place}")
+# print('Hi my name is {} {}.I am {} years old. I am from {}'.format(Fname,Lname,Age,Place))
+# print(f"Hi my name is {Fname} {Lname}.I am {Age} years old. I am from {Place}")
+
+# Nested dict  
+
+student = {
+    "Name":{"Fname":"David","Lname":"John"},
+    "Age":22,
+    "Address":{
+        "tempAddress":{"HostelNo":3545,"Hostel":"AbcHostel"}, 
+        "PermAddress":{"Houseno":106,"City":"Kochi","State":"Kerala"}
+        },
+    "Phone":(7775552221,8976543215),
+    "Marks":[80,60,60,70,30,60]
+}
+# print(student)
+# print(student['Age'])
+# print(student['Phone'])
+# print(student['Marks'])
+# print(student['Name'])
+# print(student['Address'])
+# print(student['tempAddress']) Error
+
+print(student['Name']['Lname'])
+print(student['Phone'][0])
+print(student['Marks'][2])
+print(student['Address']['PermAddress']['City'])
